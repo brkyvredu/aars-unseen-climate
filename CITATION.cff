@@ -7,8 +7,10 @@ authors:
     given-names: "Ozge"
   - family-names: "Yavru"
     given-names: "Ismail Burak"
-version: "1.0.0"
+version: "1.0.1-paper-submission"
+date-released: "2026-09-11"
 repository-code: "https://github.com/brkyvredu/aars-unseen-climate"
+doi: "10.5281/zenodo.22707228"
 license: MIT
 keywords:
   - building energy
