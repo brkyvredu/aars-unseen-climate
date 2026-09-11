@@ -1,10 +1,10 @@
-# AARS — public reproducibility package
+# AARS — Reproducibility Package
 
-This repository consolidates the data, recovered research code, strict external-validation results, and portable reproduction entrypoints for the manuscript:
+This repository contains the data, research code, strict external-validation results, and portable reproduction entrypoints associated with the manuscript:
 
 **Simulation-Budgeted Few-Shot Adaptation of Building Energy Surrogates in Unseen Climates: A Physics-Guided Anchor-Relative Approach**
 
-The package was reconstructed from the original CLASS-Guard/AARS project artifacts preserved across the research history. Whenever an exact historical file was recoverable, that file is preserved. Where the original strict scripts depended on temporary machine-specific paths, a repository-relative portable entrypoint is supplied separately and the original script is retained under `provenance/`.
+The repository consolidates the versioned study components into repository-relative workflows while preserving the frozen method configuration, evaluation masks, seeds, hyperparameters, and publication result tables.
 
 ## 1. What this package reproduces
 
@@ -55,9 +55,10 @@ See `data/results/strict/STRICT_EVALUATION_AUDIT.md` and `PROVENANCE.md` for the
 ├── CITATION.cff
 ├── DATA_DICTIONARY.md
 ├── PROVENANCE.md
-├── RECOVERY_INVENTORY.md
+├── REPRODUCIBILITY_MANIFEST.md
 ├── VALIDATION_REPORT.md
-├── LICENSE_CHOICE_REQUIRED.md
+├── LICENSE
+├── DATA_LICENSE.md
 ├── requirements-analysis.txt
 ├── requirements-simulation.txt
 │
@@ -110,8 +111,8 @@ See `data/results/strict/STRICT_EVALUATION_AUDIT.md` and `PROVENANCE.md` for the
 │   └── README.md
 │
 ├── tests/
-└── provenance/
-    └── recovered_scripts/
+└── validation/
+    └── smoke_ardahan/
 ```
 
 ## 3. Which files are authoritative?
@@ -255,7 +256,7 @@ The strict statistical pipeline uses:
 - exact paired sign-flip tests across all `2^8 = 256` sign patterns,
 - a common 997-design universe for the direct 1-shot versus 3-shot comparison.
 
-The portable implementation is `src/strict/statistical_robustness_strict.py`; the recovered historical strict script is preserved under `provenance/recovered_scripts/`.
+The portable implementation is `src/strict/statistical_robustness_strict.py`.
 
 ## 11. Figures
 
@@ -272,14 +273,9 @@ python figures/scripts/make_fig06_budget_tradeoff.py
 
 Generated PDF/PNG outputs are written to `figures/generated/`.
 
-## 12. Provenance and recovered code
+## 12. Code and result provenance
 
-The package distinguishes between:
-
-1. **exact recovered historical research files**, and
-2. **portable wrappers** created only to remove temporary machine-specific paths/imports.
-
-The scientific formulas, feature definitions, seeds, hyperparameters, strict calibration masks, and metrics are not intentionally changed in the portable wrappers. Details are in `PROVENANCE.md` and `RECOVERY_INVENTORY.md`.
+The repository uses portable, repository-relative analysis entrypoints while retaining the frozen scientific configuration used for the reported study. Details are in `PROVENANCE.md` and `REPRODUCIBILITY_MANIFEST.md`.
 
 ## 13. Data dictionary
 
@@ -287,11 +283,11 @@ See `DATA_DICTIONARY.md` for identifiers, targets, design features, climate desc
 
 ## 14. Citation
 
-`CITATION.cff` is included. After creating the GitHub repository and Zenodo release, add the final repository URL, Zenodo DOI, release date, and article DOI when available.
+`CITATION.cff` includes the public GitHub repository URL. After the Zenodo archival release, add the Zenodo DOI (and the article DOI when available) to the citation metadata and manuscript Data Availability statement.
 
 ## 15. License
 
-No license has been selected automatically. `LICENSE_CHOICE_REQUIRED.md` records this explicitly. Before making the repository public, the authors should choose licenses for code and processed data for which they hold the necessary rights. Third-party EPW files are not included.
+Source code is released under the MIT License (`LICENSE`). Unless otherwise indicated, author-generated processed simulation outputs and derived research tables under `data/` are released under CC BY 4.0 (`DATA_LICENSE.md`). Third-party EPW weather files are not included.
 
 ## 16. Authors
 

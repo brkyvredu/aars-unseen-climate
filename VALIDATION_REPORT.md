@@ -1,11 +1,12 @@
-# Validation report for the consolidated public package
+# Validation report
 
-Validation performed during consolidation:
+Validation was performed on the public repository package before the archival release.
 
 ## Static validation
 
-- All Python files under `src/`, `tests/`, `figures/scripts/`, and recovered strict provenance scripts compile successfully with `py_compile`.
-- No personal user-directory paths remain in the public data/manifests. Historical hard-coded `/mnt/data/...` paths are retained only in `provenance/recovered_scripts/` to preserve the original strict-v8 artifacts.
+- All Python files under `src/`, `tests/`, and `figures/scripts/` compile successfully with `py_compile`.
+- No personal user-directory paths or credential-like values were found in the public source/configuration/metadata files checked during packaging.
+- Third-party EPW weather files are not distributed.
 
 ## Unit tests
 
@@ -21,12 +22,12 @@ Result:
 3 passed
 ```
 
-## Authoritative result-table verification
+## Authoritative reference-table verification
 
 Command:
 
 ```bash
-python src/verify_reference_results.py
+python src/run_reproduction.py --quick-reference-check
 ```
 
 Verified values include:
@@ -47,9 +48,13 @@ All packaged reference checks passed.
 
 ## Strict model-refit smoke test
 
-A portable strict rerun was executed for **Ardahan** using the recovered frozen AARS method and packaged data/anchors.
+A portable strict rerun was executed for **Ardahan** using the frozen AARS method and packaged data/anchor files:
 
-The regenerated 1-shot and 3-shot metrics matched the recovered strict-v8 reference rows **bit-for-bit** for:
+```bash
+python src/strict/evaluate_aars_strict.py --cities Ardahan --output-dir validation/smoke_ardahan
+```
+
+The regenerated 1-shot and 3-shot rows matched the packaged strict reference rows exactly for:
 
 - MAE,
 - RMSE,
@@ -59,10 +64,8 @@ The regenerated 1-shot and 3-shot metrics matched the recovered strict-v8 refere
 - design regret,
 - top-5% recovery.
 
-This smoke test validates the portable path cleanup and the linkage between the recovered v5 method code and v8 strict evaluation logic.
+The smoke-test output tables are retained under `validation/smoke_ardahan/`.
 
 ## Figure scripts
 
-All distributed data-driven figure scripts execute successfully against the packaged reference data and write PDF + PNG outputs under `figures/generated/`.
-
-The exact smoke-test outputs used for this check are retained under `validation/smoke_ardahan/`.
+All scripts under `figures/scripts/` execute against the packaged data and generate their PDF/PNG outputs under `figures/generated/`.

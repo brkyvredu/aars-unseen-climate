@@ -1,3 +1,3 @@
 -r requirements-analysis.txt
-pvlib
+pvlib>=0.11
 pytest

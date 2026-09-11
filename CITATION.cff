@@ -3,8 +3,17 @@ message: "If you use this repository, please cite the associated article and the
 title: "AARS: Simulation-Budgeted Few-Shot Adaptation of Building Energy Surrogates in Unseen Climates"
 type: software
 authors:
-  - family-names: "Güneş Yavru"
-    given-names: "Özge"
+  - family-names: "Gunes Yavru"
+    given-names: "Ozge"
   - family-names: "Yavru"
-    given-names: "İsmail Burak"
+    given-names: "Ismail Burak"
 version: "1.0.0"
+repository-code: "https://github.com/brkyvredu/aars-unseen-climate"
+license: MIT
+keywords:
+  - building energy
+  - EnergyPlus
+  - surrogate modeling
+  - few-shot adaptation
+  - climate transfer
+  - physics-guided machine learning

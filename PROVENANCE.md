@@ -1,22 +1,23 @@
-# Artifact provenance
+# Code and result provenance
 
-This package was consolidated from the original AARS/CLASS-Guard artifacts recovered from the project history.
+This repository consolidates the versioned simulation, AARS, baseline, statistical, and strict-holdout components used in the study into a portable, repository-relative workflow.
 
-## Exact recovered components
+## Scientific lineage
 
-- CLASS-Guard v2 paired EnergyPlus simulation code: `src/simulation/`
-- Adaptive Anchor v4 development code: `src/aars/adaptive_anchor_loco.py`
-- Frozen external evaluator v5: `src/aars/evaluate_frozen_v4_external.py`
-- External baseline benchmark v6: `src/baselines/external_baseline_benchmark.py`
-- Strict holdout v8 result tables: `data/results/strict/`
-- Original strict v8 scripts are preserved under `provenance/recovered_scripts/`.
+- Paired EnergyPlus simulation workflow: `src/simulation/`
+- Frozen AARS configuration and model functions: `src/aars/`, `config/METHOD_FREEZE_v4.json`
+- External baseline benchmark: `src/baselines/`
+- Strict calibration-excluded evaluation: `src/strict/`
+- Authoritative result tables: `data/results/strict/`
 
-## Portable strict scripts
-
-The scripts under `src/strict/` are portability-cleaned entrypoints assembled from the exact recovered v5/v6/v8 code. Their scientific logic, seeds, features, hyperparameters, calibration masks, and metrics are preserved; only hard-coded temporary paths/imports were replaced by repository-relative CLI arguments.
-
-A one-climate reproduction check (Ardahan) was run in the pinned analysis environment and matched the recovered v8 strict metrics exactly for MAE, RMSE, R², Spearman, Kendall, regret, and top-5% recovery.
+The public `src/strict/` scripts use repository-relative paths and command-line arguments. This portability cleanup does not intentionally change the scientific formulas, feature definitions, random seeds, hyperparameters, calibration masks, or metrics used in the reported evaluation.
 
 ## Authoritative result set
 
-The strict calibration-excluded v8 results are the public reference results. Older all-1000-row archived fits are not used as publication truth because refitting HistGradientBoosting under the recorded environment produced small numerical differences. See `data/results/strict/STRICT_EVALUATION_AUDIT.md`.
+The calibration-excluded strict result set under `data/results/strict/` is the publication reference. One target anchor is excluded from the 1-shot test universe (999 evaluated designs/climate), and three anchors are excluded from the 3-shot universe (997 evaluated designs/climate).
+
+Older exploratory or superseded all-1000-row outputs are not distributed as publication results.
+
+## Reproducibility checks
+
+`VALIDATION_REPORT.md` records the static checks, unit tests, reference-table verification, and one-climate model-refit smoke test performed on the public package.
