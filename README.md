@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22707228.svg)](https://doi.org/10.5281/zenodo.22707228)
+
 # AARS — Reproducibility Package
 
 This repository contains the data, research code, strict external-validation results, and portable reproduction entrypoints associated with the manuscript:
