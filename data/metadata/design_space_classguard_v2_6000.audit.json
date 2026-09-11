@@ -1,0 +1,51 @@
+{
+  "rows": 6000,
+  "expected_rows": 6000,
+  "base_designs": 1000,
+  "cities": [
+    "Ankara",
+    "Antalya",
+    "Bursa",
+    "Erzurum",
+    "Istanbul",
+    "Izmir"
+  ],
+  "incomplete_base_designs": 0,
+  "mismatched_design_columns": [],
+  "duplicate_energy_design_ids": 0,
+  "city_counts": {
+    "Ankara": 1000,
+    "Antalya": 1000,
+    "Bursa": 1000,
+    "Erzurum": 1000,
+    "Istanbul": 1000,
+    "Izmir": 1000
+  },
+  "orientation_counts_per_city": {
+    "Ankara:E": 250,
+    "Ankara:N": 250,
+    "Ankara:S": 250,
+    "Ankara:W": 250,
+    "Antalya:E": 250,
+    "Antalya:N": 250,
+    "Antalya:S": 250,
+    "Antalya:W": 250,
+    "Bursa:E": 250,
+    "Bursa:N": 250,
+    "Bursa:S": 250,
+    "Bursa:W": 250,
+    "Erzurum:E": 250,
+    "Erzurum:N": 250,
+    "Erzurum:S": 250,
+    "Erzurum:W": 250,
+    "Istanbul:E": 250,
+    "Istanbul:N": 250,
+    "Istanbul:S": 250,
+    "Istanbul:W": 250,
+    "Izmir:E": 250,
+    "Izmir:N": 250,
+    "Izmir:S": 250,
+    "Izmir:W": 250
+  },
+  "valid": true
+}

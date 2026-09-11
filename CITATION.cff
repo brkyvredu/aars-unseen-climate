@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the associated article and the archived repository release."
+title: "AARS: Simulation-Budgeted Few-Shot Adaptation of Building Energy Surrogates in Unseen Climates"
+type: software
+authors:
+  - family-names: "Güneş Yavru"
+    given-names: "Özge"
+  - family-names: "Yavru"
+    given-names: "İsmail Burak"
+version: "1.0.0"

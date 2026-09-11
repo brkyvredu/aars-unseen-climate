@@ -1,0 +1,29 @@
+{
+  "input": "data/design_space/design_space_external_8000.csv",
+  "output": "data/processed/energy_results_external_8000.csv",
+  "energyplus_exe": "EnergyPlus 26.1.0 (local installation path not distributed)",
+  "weather_root": "EPW files obtained separately from Climate.OneBuilding; not redistributed",
+  "include_ddy": true,
+  "run_sizing_periods": false,
+  "assumptions": {
+    "occupied_start_hour": 8,
+    "occupied_end_hour": 17,
+    "occupied_heating_setpoint_c": 20.0,
+    "unoccupied_heating_setpoint_c": 16.0,
+    "occupied_cooling_setpoint_c": 26.0,
+    "unoccupied_cooling_setpoint_c": 30.0,
+    "people_per_m2": 0.536,
+    "activity_w_per_person": 120.0,
+    "lighting_w_per_m2": 9.0,
+    "equipment_w_per_m2": 5.0,
+    "lighting_unoccupied_fraction": 0.0,
+    "equipment_unoccupied_fraction": 0.05,
+    "outdoor_air_m3_s_per_person": 0.005,
+    "outdoor_air_m3_s_per_m2": 0.0006,
+    "infiltration_air_changes_per_hour": 0.3,
+    "timestep_per_hour": 4,
+    "terrain": "City",
+    "max_warmup_days": 100,
+    "min_warmup_days": 6
+  }
+}

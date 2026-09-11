@@ -1,0 +1,11 @@
+{
+  "bootstrap_resamples": 20000,
+  "bootstrap_seed": 20260820,
+  "paired_bootstrap_seed": 20260821,
+  "independent_unit": "external climate",
+  "exact_signflip_patterns": 256,
+  "strict_holdout": true,
+  "one_shot_n_eval": 999,
+  "three_shot_n_eval": 997,
+  "aars1_vs_aars3_common_holdout_n": 997
+}

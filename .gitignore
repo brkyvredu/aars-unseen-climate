@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+outputs/
+runs/
+models/generated*/
+data/raw/weather*/
+*.epw
+*.ddy
+.DS_Store

@@ -1,0 +1,34 @@
+{
+  "method_name_working": "Adaptive Anchor Relative Surrogate (AARS) v4",
+  "freeze_status": "FROZEN_BEFORE_EXTERNAL_VALIDATION",
+  "source_domains": [
+    "Ankara",
+    "Antalya",
+    "Bursa",
+    "Erzurum",
+    "Istanbul",
+    "Izmir"
+  ],
+  "paired_base_designs": 1000,
+  "candidate_pool_size": 10,
+  "anchor_budgets_to_report": [
+    1,
+    3
+  ],
+  "anchor_selection": "Maximin design-only candidate bank; source-only nested LOCO anchor scores weighted by target weather-descriptor distance; normalized heating/cooling scores combined without target energy labels.",
+  "heating_model": "paired physics-delta Ridge baseline + HGB residual",
+  "cooling_model": "raw paired anchor-relative HGB",
+  "total_energy": "predicted heating + predicted cooling + source-domain mean non-HVAC intensity",
+  "primary_external_endpoint": "total-energy MAE",
+  "secondary_endpoints": [
+    "total-energy R2",
+    "heating MAE/R2",
+    "cooling MAE/R2",
+    "Spearman rank correlation",
+    "Kendall tau",
+    "Top-5% recovery",
+    "design regret",
+    "worst-climate performance"
+  ],
+  "no_post_external_tuning_rule": "Do not change model structure, feature set, candidate-pool rule, HGB settings, anchor-selection rule, or reported anchor budgets after viewing external target results."
+}

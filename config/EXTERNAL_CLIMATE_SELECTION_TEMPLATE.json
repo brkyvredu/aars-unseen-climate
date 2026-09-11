@@ -1,0 +1,5 @@
+{
+  "note": "Place candidate EPW files under subfolders of one root directory. select_external_climates.py scans them automatically; no city list is hard-coded here to avoid cherry-picking.",
+  "recommended_external_count": 8,
+  "recommended_candidate_pool": "At least 20-30 geographically/climatically diverse EPW locations."
+}
