@@ -96,8 +96,8 @@ See `data/results/strict/STRICT_EVALUATION_AUDIT.md` and `PROVENANCE.md` for the
 │
 ├── src/
 │   ├── simulation/       # paired design / EnergyPlus / EPW physics pipeline
-│   ├── aars/             # recovered AARS v4 + frozen external evaluator v5
-│   ├── baselines/        # recovered baseline benchmark v6
+│   ├── aars/             # AARS v4 + frozen external evaluator v5
+│   ├── baselines/        # baseline benchmark v6
 │   ├── strict/           # portable strict-holdout reproduction entrypoints
 │   ├── run_reproduction.py
 │   ├── verify_reference_results.py
